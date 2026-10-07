@@ -1,0 +1,20 @@
+{
+  "fase_d": {
+    "kelas": ["7", "8", "9"],
+    "jenjang": "MTs / SMP",
+    "elemen": ["Pancasila", "UUD NRI Tahun 1945", "Bhinneka Tunggal Ika", "Negara Kesatuan Republik Indonesia"],
+    "deskripsi": "Fokus pada pengenalan norma, sejarah perumusan, keberagaman lokal, dan lingkungan tempat tinggal."
+  },
+  "fase_e": {
+    "kelas": ["10"],
+    "jenjang": "MA / SMA",
+    "elemen": ["Pancasila", "UUD NRI Tahun 1945", "Bhinneka Tunggal Ika", "Negara Kesatuan Republik Indonesia"],
+    "deskripsi": "Fokus pada analisis cara pandang pendiri bangsa, kedudukan ideologi, tata urutan peraturan perundangan, dan integrasi bangsa."
+  },
+  "fase_f": {
+    "kelas": ["11", "12"],
+    "jenjang": "MA / SMA",
+    "elemen": ["Pancasila", "UUD NRI Tahun 1945", "Bhinneka Tunggal Ika", "Negara Kesatuan Republik Indonesia"],
+    "deskripsi": "Fokus pada analisis peluang/tantangan global, dinamika amandemen konstitusi, resolusi konflik berkeadilan, dan pertahanan negara."
+  }
+}
