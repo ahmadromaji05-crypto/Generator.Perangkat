@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generator Perangkat Ajar PPKn Fase D - F</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>Generator Perangkat Ajar Terpadu PPKn</h2>
+      <p>Mendukung Fase D (Kelas 7-9), Fase E (Kelas 10), dan Fase F (Kelas 11-12)</p>
+    </header>
+
+    <div class="grid-layout">
+      <!-- Formulir Parameter -->
+      <form id="formPerangkat">
+        <label>Nama Guru:</label>
+        <input type="text" id="namaGuru" value="Moh. Joharul Yusuf, S.Pd." required>
+
+        <label>Satuan Pendidikan:</label>
+        <input type="text" id="satuanPendidikan" value="MA Pesantren Terpadu Al Fauzan Lumajang" required>
+
+        <label>Pilih Fase & Jenjang:</label>
+        <select id="pilihFase" onchange="updateKelas()">
+          <option value="D">Fase D (MTs / SMP)</option>
+          <option value="E" selected>Fase E (MA / SMA - Kelas 10)</option>
+          <option value="F">Fase F (MA / SMA - Kelas 11 & 12)</option>
+        </select>
+
+        <label>Kelas:</label>
+        <select id="pilihKelas">
+          <option value="10">Kelas 10</option>
+        </select>
+
+        <label>Semester:</label>
+        <select id="pilihSemester">
+          <option value="Gasal">Semester Gasal</option>
+          <option value="Genap">Semester Genap</option>
+        </select>
+
+        <label>Materi Pokok / Elemen:</label>
+        <input type="text" id="materiPokok" value="Perumusan Pancasila sebagai Dasar Negara" required>
+
+        <label>Dimensi Profil Lulusan (Pilih 3):</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="dimensi" value="Keimanan dan Ketakwaan" checked> Keimanan & Ketakwaan</label>
+          <label><input type="checkbox" name="dimensi" value="Kewargaan" checked> Kewargaan</label>
+          <label><input type="checkbox" name="dimensi" value="Penalaran Kritis" checked> Penalaran Kritis</label>
+          <label><input type="checkbox" name="dimensi" value="Kreativitas"> Kreativitas</label>
+          <label><input type="checkbox" name="dimensi" value="Kolaborasi"> Kolaborasi</label>
+          <label><input type="checkbox" name="dimensi" value="Kemandirian"> Kemandirian</label>
+        </div>
+
+        <label>Panca Cinta (Pilih 3):</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="cinta" value="Cinta Tuhan YME" checked> Cinta Tuhan YME</label>
+          <label><input type="checkbox" name="cinta" value="Cinta Bangsa & Negara" checked> Cinta Bangsa & Negara</label>
+          <label><input type="checkbox" name="cinta" value="Cinta Ilmu Pengetahuan" checked> Cinta Ilmu Pengetahuan</label>
+          <label><input type="checkbox" name="cinta" value="Cinta Diri & Sesama"> Cinta Diri & Sesama</label>
+          <label><input type="checkbox" name="cinta" value="Cinta Lingkungan"> Cinta Lingkungan</label>
+        </div>
+
+        <button type="button" class="btn" onclick="generatePerangkat()">Susun Perangkat Ajar</button>
+      </form>
+
+      <!-- Panel Tampilan Output -->
+      <div class="preview-panel">
+        <div class="preview-actions">
+          <button class="btn-secondary" onclick="salinPrompt()">Salin Teks</button>
+          <button class="btn-secondary" onclick="window.print()">Cetak Dokumen</button>
+        </div>
+        <textarea id="outputPrompt" readonly></textarea>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
